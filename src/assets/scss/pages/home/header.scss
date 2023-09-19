@@ -1,0 +1,100 @@
+.home-header {
+
+    @media (max-width: 425px) {
+        .container {
+            padding: 0;
+        }
+    }
+
+   &__content {
+       margin-top: 26px;
+
+        .content-image {
+            position: relative;
+            display: flex;
+            justify-content: center;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 45px;
+                left: 170px;
+                width: 489px;
+                height: 489px;
+                flex-shrink: 0;
+                border-radius: 489px;
+                background: #F1082B;
+                filter: blur(250px);
+                z-index: 2;
+
+                @media (max-width: 425px) {
+                    top: 17px;
+                    left: -64px;
+                    width: 271px;
+                    height: 271px;
+                    border-radius: 271px;
+                    
+                }
+            }
+
+            &::after {
+                content: '';
+                position: absolute;
+                top: -50px;
+                right: 230px;
+                width: 489px;
+                height: 489px;
+                flex-shrink: 0;
+                border-radius: 489px;
+                background: #EC57FD;
+                filter: blur(250px);
+                z-index: 1;
+
+                @media (max-width: 425px) {
+                    width: 265px;
+                    height: 265px;
+                    border-radius: 265px;
+                    top: -72px;
+                    right: -80px;
+                }
+            }
+
+            img {
+                position: relative;
+                z-index: 3;
+            }
+        }
+
+        .content-text {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            margin: -138px auto 0 auto;
+            max-width: 698px;
+            z-index: 3;
+
+            @media (max-width: 425px) {
+                margin: -34px auto 0 auto;
+            }
+
+            .subtitle {
+                margin-top: 20px;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 32px;
+                color: #fff;
+                position: relative;
+                z-index: 3;
+
+                @media (max-width: 425px) {
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .button {
+            margin-top: 40px;
+        }
+   }
+}   

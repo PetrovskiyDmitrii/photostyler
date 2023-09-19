@@ -1,0 +1,126 @@
+.h1 {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 100%;
+  letter-spacing: -1.28px;
+  text-transform: uppercase;
+  background: linear-gradient(90deg, #EC57FD 6.8%, #F1082B 98.16%);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+  @media (max-width: 425px) {
+    font-size: 32px;
+  }
+}
+
+.h2 {
+  position: relative;
+  margin: 0 0 14px 0;
+  font-style: normal;
+  font-weight: 600;
+  color: #fff;
+}
+
+.h3 {
+  position: relative;
+  color: #FFF;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.h4 {
+  color: #FFF;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  margin: 40px 0 0 0;
+  padding: 0;
+  gap: 24px 0;
+  list-style: none;
+  font-weight: 400;
+  color: #fff;
+
+  li {
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0 26px;
+
+    &:not(:last-child) {
+      &::after {
+        content: '';
+        z-index: -1;
+        position: absolute;
+        top: 100%;
+        background: linear-gradient(180deg, rgba(87, 89, 125, 0.67) 0%, rgba(171, 173, 234, 0.00) 100%);
+        
+        @media (min-width: 1024px) {
+          left: 28.5px;
+          width: 3px;
+          height: 24px;
+        }
+
+        @media (max-width: 1023px) {
+          width: 2px;
+          height: 16px;
+          left: 16px;
+        }
+      }
+    }
+
+    &::before {
+      position: relative;
+      content: '';
+      flex-shrink: 0;
+      background: url('assets/images/list-icon.svg') center no-repeat;
+
+      @media (min-width: 1024px) {
+        width: 60px;
+        height: 60px;
+      }
+
+      @media (max-width: 1023px) {
+        width: 34px;
+        height: 34px;
+        background-size: contain;
+      }
+    }
+  }
+}
+
+p {
+  margin-top: 0;
+  line-height: 1.6;
+
+  &:not(:last-child) {
+    margin: 0 0 20px 0;
+  }
+}
+
+
+.ta {
+
+  &-center {
+    text-align: center;
+  }
+
+  &-right {
+    text-align: right;
+  }
+
+  &-left {
+    text-align: left;
+  }
+}
+
+.white {
+  color: #fff;
+}

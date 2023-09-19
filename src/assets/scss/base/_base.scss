@@ -1,0 +1,48 @@
+@import './fonts';
+@import './typography';
+
+html {
+  background-color: #000;
+  font-family: 'Noto Sans', sans-serif;
+  font-weight: 400;
+  line-height: normal;
+  color: #B7B6BD;
+  
+  @media (min-width: 1024px) {
+    font-size: 16px;
+  }
+
+  @media (max-width: 1023px) {
+    font-size: 14px;
+  }
+
+  @media (max-width: 767px) {
+    overflow-x: hidden;
+  }
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+.hide-sm {
+  @media (max-width: 767px) {
+    display: none;
+  }
+}
+
+.hide-md {
+  @media (min-width: 768px) {
+    display: none;
+  }
+}
+
+img[data-src] {
+  opacity: 0;
+
+  &.loaded {
+    opacity: 1;
+  }
+}

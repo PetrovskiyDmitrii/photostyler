@@ -1,0 +1,32 @@
+.button {
+  position: relative;
+  display: flex;
+  width: 300px;
+  height: 60px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  color: #fff;
+  text-align: center;
+  font-family: 'Inter', sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 100%;
+  background: linear-gradient(90deg, #EC57FD, #F1082B);
+  transition: background 300ms ease-in-out;  
+  z-index: 3;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  @media (max-width: 425px) {
+    font-size: 18px;
+    width: auto;
+  }
+
+  &.mc {
+    margin: 0 auto;
+  }
+}

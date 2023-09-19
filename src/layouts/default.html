@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{> head }}
+  </head>
+  <body>
+    {{> header }}
+    <main class="main">
+      {{> body }}
+    </main>
+    {{> footer }}
+
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.4/dist/lazyload.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <style>
+      @media (max-width: 767px) {
+        body::after {
+          opacity: 0;
+          visibility: hidden;
+          user-select: none;
+          pointer-events: none;
+        }
+      }
+    </style>
+  </body>
+</html>
