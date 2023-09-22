@@ -8,10 +8,9 @@ title: Photostyler
     <div class="home-header__content">
       <div class="content-image">
         <picture>
-          <source media="(max-width:425px)" srcset="assets/images/main-image-xs.png">
-          <img src="assets/images/main-image.png" alt="Photostyler">
+          <source media="(max-width:425px)" srcset="assets/images/main-image-xs.webp">
+          <img src="assets/images/main-image.webp" alt="Photostyler">
         </picture>
-        <!-- <img src="assets/images/main-image.png" alt="Photostyler"> -->
       </div>
       <div class="content-text">
         <h1 class="h1 ta ta-center">
@@ -21,14 +20,14 @@ title: Photostyler
           Use artificial intelligence for truly important purposes
         </span>
       </div>
-      <a href="#" class="button mc">Start creating</a>
+      <a href="#creating" class="button mc">Start creating</a>
     </div>
   </div>
 </div>
 
 
 <div class="home-works">
-  <div class="container">
+  <div class="container" id="howit">
     <div class="home-works__content">
         <div class="title">How it works</div>
         <div class="works-container">
@@ -74,136 +73,138 @@ title: Photostyler
         <div class="tile">
           <div class="tile__title">Choose style</div>
           <div class="tile__wrapper">
-              <div class="tile__item">
+              <input type="checkbox" class="custom-checkbox" id="apply-1" name="apply-1" value="Anime">
+              <label class="tile__item" for="apply-1">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-1.png" alt="">
                 </div>
                 <div class="tile__text">Anime</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-1" name="apply-1" value="Anime">
-                  <label for="apply-1"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-2" name="apply-2" value="Entergalactic">
+              <label class="tile__item" for="apply-2">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-2.png" alt="">
                 </div>
                 <div class="tile__text">Entergalactic</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-2" name="apply-2" value="Entergalactic">
-                  <label for="apply-2"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-3" name="apply-3" value="Meteora graffiti">
+              <label class="tile__item" for="apply-3">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-3.png" alt="">
                 </div>
                 <div class="tile__text">Meteora graffiti</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-3" name="apply-3" value="Meteora graffiti">
-                  <label for="apply-3"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-4" name="apply-4" value="Meteora graphic">
+              <label class="tile__item" for="apply-4">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-4.png" alt="">
                 </div>
                 <div class="tile__text">Meteora graphic</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-4" name="apply-4" value="Meteora graphic">
-                  <label for="apply-4"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-5" name="apply-5" value="Watercolour">
+              <label class="tile__item" for="apply-5">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-5.png" alt="">
                 </div>
                 <div class="tile__text">Watercolour</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-5" name="apply-5" value="Watercolour">
-                  <label for="apply-5"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-6" name="apply-6" value="Cyberpunk">
+              <label class="tile__item" for="apply-6">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-6.png" alt="">
                 </div>
                 <div class="tile__text">Cyberpunk</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-6" name="apply-6" value="Cyberpunk">
-                  <label for="apply-6"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-7" name="apply-7" value="Steampunk">
+              <label class="tile__item" for="apply-7">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-7.png" alt="">
                 </div>
                 <div class="tile__text">Steampunk</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-7" name="apply-7" value="Steampunk">
-                  <label for="apply-7"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-8" name="apply-8" value="Realistic 3D">
+              <label class="tile__item" for="apply-8">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-8.png" alt="">
                 </div>
                 <div class="tile__text">Realistic 3D</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-8" name="apply-8" value="Realistic 3D">
-                  <label for="apply-8"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-9" name="apply-9" value="Cartoon">
+              <label class="tile__item" for="apply-9">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-9.png" alt="">
                 </div>
                 <div class="tile__text">Cartoon</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-9" name="apply-9" value="Cartoon">
-                  <label for="apply-9"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-10" name="apply-10" value="Graffiti">
+              <label class="tile__item" for="apply-10">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-10.png" alt="">
                 </div>
                 <div class="tile__text">Graffiti</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-10" name="apply-10" value="Graffiti">
-                  <label for="apply-10"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-11" name="apply-11" value="Cinematic">
+              <label class="tile__item" for="apply-11">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-11.png" alt="">
                 </div>
                 <div class="tile__text">Cinematic</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-11" name="apply-11" value="Cinematic">
-                  <label for="apply-11"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
-              <div class="tile__item">
+              </label>
+              <input type="checkbox" class="custom-checkbox" id="apply-12" name="apply-12" value="Children’s painting">
+              <label class="tile__item" for="apply-12">
                 <div class="item__img">
                   <img src="assets/images/tiles/tile-12.png" alt="">
                 </div>
                 <div class="tile__text">Children’s painting</div>
                 <div class="check">
-                  <input type="checkbox" class="custom-checkbox" id="apply-12" name="apply-12" value="Children’s painting">
-                  <label for="apply-12"></label>
+                  <div class="check-box"></div>
                 </div>
-              </div>
+              </label>
           </div>
 
           <button class="tile-btn" id="sendRequest">Generate image</button>
+          <button class="button reset" id="newGenarate">New Generate</button>
         </div>
-        <div class="uploader">
+        <div class="uploader" id="creating">
           <div class="uploader__container">
             <div class="uploader__border" id="uploader">
               <button class="upload-btn" id="btnUpload">Upload your image</button>
             </div>
             <div class="uploader__preview">
+              <button class="download-btn" id="load-image">Download</button>
               <div class="loader">
                 <div class="content">
                   <div class="icon">
@@ -218,9 +219,9 @@ title: Photostyler
                 </div>
               </div>
               <input type="file" id="inputImage" accept="image/*">
-              <div id="preview" class="preview-container"></div>
-              <div class="result" id="result-img">
-                <button class="download-btn" id="load-image">Download</button>
+              <div id="preview" class="preview-container">
+                <img src="" alt="" class="uploaded">
+                <img src="" alt="" class="downloaded" id="img-load">
               </div>
             </div>
           </div>
@@ -242,14 +243,7 @@ title: Photostyler
         <p class="ta ta-center">We are grateful for every donation that helps support our product</p>
       </div>
       <div class="donate">
-        <div class="input-container">
-          <div class="input-container__text">Support our project</div>
-          <div class="input-container__divider"></div>
-          <div class="input-container__input">
-            <input type="number" placeholder="$ 0+">
-          </div>
-        </div>
-        <a href="#" class="button">Donate</a>
+        <button class="button" id="btnDonate">Donate</a>
       </div>
     </div>
   </div>

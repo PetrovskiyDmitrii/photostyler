@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/style.min.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="robots" content="index, follow">
+    <meta name="google" content="notranslate">
+    <meta name="description" content="Best service for styling your images with AI">
+    
+    <link rel="apple-touch-icon-precomposed" sizes="57x57" href="assets/images/favicon/apple-touch-icon-57x57.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/images/favicon/apple-touch-icon-114x114.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/images/favicon/apple-touch-icon-72x72.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/images/favicon/apple-touch-icon-144x144.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="60x60" href="assets/images/favicon/apple-touch-icon-60x60.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="assets/images/favicon/apple-touch-icon-120x120.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="76x76" href="assets/images/favicon/apple-touch-icon-76x76.png" />
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="assets/images/favicon/apple-touch-icon-152x152.png" />
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-196x196.png" sizes="196x196" />
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-32x32.png" sizes="32x32" />
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-16x16.png" sizes="16x16" />
+    <link rel="icon" type="image/png" href="assets/images/favicon/favicon-128.png" sizes="128x128" />
+    <meta name="application-name" content="&nbsp;"/>
+    <meta name="msapplication-TileColor" content="#FFFFFF" />
+    <meta name="msapplication-TileImage" content="mstile-144x144.png" />
+    <meta name="msapplication-square70x70logo" content="mstile-70x70.png" />
+    <meta name="msapplication-square150x150logo" content="mstile-150x150.png" />
+    <meta name="msapplication-wide310x150logo" content="mstile-310x150.png" />
+    <meta name="msapplication-square310x310logo" content="mstile-310x310.png" />
+    
+    
+    <title>Photostyler</title>
+    
+    <style>
+      @media (max-width: 767px) {
+        body::after {
+          content: '';
+          z-index: 10000;
+          width: 100%;
+          height: 100%;
+          background-color: #100C24;
+          position: fixed;
+          top: 0;
+          left: 0;
+          transition: 200ms ease-in-out;
+        }
+      }
+    </style>
+    
+    <script>
+      const zoomer = () => {
+        const width = window.innerWidth;
+        const result = {
+          viewport: null,
+        };
+    
+    
+        if (width >= 1024) {
+          result.viewport = 1440;
+        } else if (width >= 768 && width < 1024) {
+          result.viewport = 768;
+        } else if (width < 768) {
+          result.viewport = 375;
+        }
+        return result;
+      }
+    
+      const { viewport } = zoomer();
+      const meta = document.head.querySelector('meta[name="viewport"]');
+      meta.setAttribute('content', `width=${viewport}, user-scalable=no`);
+    
+      const getVisualViewportHeight = () => {
+        const doc = document.documentElement;
+        doc.style.setProperty('--visual-viewport-height', `${window.visualViewport?.height || 0}px`);
+      }
+    
+      getVisualViewportHeight();
+    </script>
+  </head>
+  <body>
+    <header class="header container">
+      <a href="/" class="header__logo">
+        Photostyler
+      </a>
+    
+      <div class="header__links">
+        <a href="#creating">Generate image</a>
+        <a href="#howit">How it works</a>
+      </div>
+    </header>    <main class="main">
+      
+      <div class="home-header">
+        <div class="container">
+          <div class="home-header__content">
+            <div class="content-image">
+              <picture>
+                <source media="(max-width:425px)" srcset="assets/images/main-image-xs.webp">
+                <img src="assets/images/main-image.webp" alt="Photostyler">
+              </picture>
+            </div>
+            <div class="content-text">
+              <h1 class="h1 ta ta-center">
+                CHANGE YOUR PHOTO style in secondS
+              </h1>
+              <span class="subtitle ta ta-center">
+                Use artificial intelligence for truly important purposes
+              </span>
+            </div>
+            <a href="#creating" class="button mc">Start creating</a>
+          </div>
+        </div>
+      </div>
+      
+      
+      <div class="home-works">
+        <div class="container" id="howit">
+          <div class="home-works__content">
+              <div class="title">How it works</div>
+              <div class="works-container">
+                <div class="works-container__item">
+                  <div class="item-container">
+                    <img src="assets/images/works-1.svg" alt="How it works">
+                    <div class="icon">1</div>
+                  </div>
+                  <div class="item-text">Upload your photo</div>
+                </div>
+                <div class="works-container__item">
+                  <div class="item-container">
+                    <img src="assets/images/works-2.svg" alt="How it works">
+                    <div class="icon">2</div>
+                  </div>
+                  <div class="item-text">Choose one of the style</div>
+                </div>
+                <div class="works-container__item">
+                  <div class="item-container">
+                    <img src="assets/images/works-3.svg" alt="How it works">
+                    <div class="icon">3</div>
+                  </div>
+                  <div class="item-text">Get the result</div>
+                </div>
+                <div class="works-container__item">
+                  <div class="item-container">
+                    <img src="assets/images/works-4.svg" alt="How it works">
+                    <div class="icon">4</div>
+                  </div>
+                  <div class="item-text">Download for free</div>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="home-style">
+        <div class="container">
+            <h2 class="h1 ta ta-center">Let's do it</h2>
+            <span class="under-title ta ta-center">It's totally free</span>
+      
+            <div class="home-style__content">
+              <div class="tile">
+                <div class="tile__title">Choose style</div>
+                <div class="tile__wrapper">
+                    <input type="checkbox" class="custom-checkbox" id="apply-1" name="apply-1" value="Anime">
+                    <label class="tile__item" for="apply-1">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-1.png" alt="">
+                      </div>
+                      <div class="tile__text">Anime</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-2" name="apply-2" value="Entergalactic">
+                    <label class="tile__item" for="apply-2">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-2.png" alt="">
+                      </div>
+                      <div class="tile__text">Entergalactic</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-3" name="apply-3" value="Meteora graffiti">
+                    <label class="tile__item" for="apply-3">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-3.png" alt="">
+                      </div>
+                      <div class="tile__text">Meteora graffiti</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-4" name="apply-4" value="Meteora graphic">
+                    <label class="tile__item" for="apply-4">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-4.png" alt="">
+                      </div>
+                      <div class="tile__text">Meteora graphic</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-5" name="apply-5" value="Watercolour">
+                    <label class="tile__item" for="apply-5">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-5.png" alt="">
+                      </div>
+                      <div class="tile__text">Watercolour</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-6" name="apply-6" value="Cyberpunk">
+                    <label class="tile__item" for="apply-6">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-6.png" alt="">
+                      </div>
+                      <div class="tile__text">Cyberpunk</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-7" name="apply-7" value="Steampunk">
+                    <label class="tile__item" for="apply-7">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-7.png" alt="">
+                      </div>
+                      <div class="tile__text">Steampunk</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-8" name="apply-8" value="Realistic 3D">
+                    <label class="tile__item" for="apply-8">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-8.png" alt="">
+                      </div>
+                      <div class="tile__text">Realistic 3D</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-9" name="apply-9" value="Cartoon">
+                    <label class="tile__item" for="apply-9">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-9.png" alt="">
+                      </div>
+                      <div class="tile__text">Cartoon</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-10" name="apply-10" value="Graffiti">
+                    <label class="tile__item" for="apply-10">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-10.png" alt="">
+                      </div>
+                      <div class="tile__text">Graffiti</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-11" name="apply-11" value="Cinematic">
+                    <label class="tile__item" for="apply-11">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-11.png" alt="">
+                      </div>
+                      <div class="tile__text">Cinematic</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                    <input type="checkbox" class="custom-checkbox" id="apply-12" name="apply-12" value="Children’s painting">
+                    <label class="tile__item" for="apply-12">
+                      <div class="item__img">
+                        <img src="assets/images/tiles/tile-12.png" alt="">
+                      </div>
+                      <div class="tile__text">Children’s painting</div>
+                      <div class="check">
+                        <div class="check-box"></div>
+                      </div>
+                    </label>
+                </div>
+      
+                <button class="tile-btn" id="sendRequest">Generate image</button>
+                <button class="button reset" id="newGenarate">New Generate</button>
+              </div>
+              <div class="uploader" id="creating">
+                <div class="uploader__container">
+                  <div class="uploader__border" id="uploader">
+                    <button class="upload-btn" id="btnUpload">Upload your image</button>
+                  </div>
+                  <div class="uploader__preview">
+                    <button class="download-btn" id="load-image">Download</button>
+                    <div class="loader">
+                      <div class="content">
+                        <div class="icon">
+                          <img src="assets/images/loader-icon.svg" alt="Loader">
+                        </div>
+                        <div class="title">
+                          Processing your photo
+                        </div>
+                        <div class="text">
+                          Do not close this tab
+                        </div>
+                      </div>
+                    </div>
+                    <input type="file" id="inputImage" accept="image/*">
+                    <div id="preview" class="preview-container">
+                      <img src="" alt="" class="uploaded">
+                      <img src="" alt="" class="downloaded" id="img-load">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+      
+      <div class="home-support">
+        <div class="container">
+          <div class="home-support__container">
+            <div class="img">
+              <img src="assets/images/support.png" alt="">
+            </div>
+            <div class="divider"></div>
+            <div class="text">
+              <h2 class="h2 ta ta-center">We are happy to provide you with our AI tool
+                for free so that you can enjoy the results.</h2>
+              <p class="ta ta-center">We are grateful for every donation that helps support our product</p>
+            </div>
+            <div class="donate">
+              <button class="button" id="btnDonate">Donate</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__name">Photostyler</div>
+        <div class="footer__links">
+          <div class="footer__navigation">
+            <nav class="footer__main-nav">
+              <ul>
+                <li><a href="#creating">Generate image</a></li>
+                <li><a href="#howit">How it works</a></li>
+              </ul>
+            </nav>
+    
+            <nav class="footer__sub-nav">
+              <ul>
+                <li><a href="#">Privacy policy</a></li>
+                <li><a href="#">Terms of use</a></li>
+              </ul>
+            </nav>
+          </div>
+          <div class="footer__contacts">
+            <div>
+              <span>Beneficiary name: ICONPIX Llp</span>
+              <span>Address: 65 Compton Street, London, EC1V 0BN, United Kingdom</span>
+            </div>
+            <div>
+              <span class="title">Contacts</span>
+              <span>https://iconpix24.com</span>
+              <span>contact@iconpix24.com</span>
+              <span>+44 7458164352</span>
+            </div>
+          </div>
+        </div>
+      </div>  
+    
+      <div class="donate-modal">
+        <div class="close-modal">
+          <img src="assets/images/icon-close.svg" alt="Close modal">
+        </div>
+        <div class="modal-container">
+          <div class="donate-title">Choose an amount, you would like to donate</div>
+          <div class="donate-bill">
+              <div class="bill-item">
+                <span>2$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+              <div class="bill-item">
+                <span>5$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+              <div class="bill-item">
+                <span>10$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+              <div class="bill-item">
+                <span>15$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+              <div class="bill-item">
+                <span>50$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+              <div class="bill-item">
+                <span>125$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+              <div class="bill-item">
+                <span>175$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+              <div class="bill-item">
+                <span>500$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+              <div class="bill-item">
+                <span>1000$</span>
+                <img src="assets/images/arrow-r.svg" alt="arrow">
+              </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.8.4/dist/lazyload.min.js"></script>
+    <script src="assets/js/app.js"></script>
+    <style>
+      @media (max-width: 767px) {
+        body::after {
+          opacity: 0;
+          visibility: hidden;
+          user-select: none;
+          pointer-events: none;
+        }
+      }
+    </style>
+  </body>
+</html>

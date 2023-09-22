@@ -24,6 +24,9 @@
                 flex-shrink: 0;
                 border-radius: 489px;
                 background: #F1082B;
+                -webkit-filter: blur(250px);
+                -moz-filter: blur(250px);
+                -ms-filter: blur(250px);
                 filter: blur(250px);
                 z-index: 2;
 
@@ -95,6 +98,10 @@
 
         .button {
             margin-top: 40px;
+
+            @media (max-width: 425px) {
+                margin: 40px 10px 0 10px;
+            }
         }
    }
 }   
